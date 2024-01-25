@@ -14,7 +14,7 @@ const SelectedFilterCard: React.FC<SelectedFilterCardProps> = ({
 }) => {
   return (
     <button
-      className="bg-neutral-700 h-[37px] flex items-center justify-between text-sm gap-1 pl-[11px] pr-[19px] rounded-[8px] text-white"
+      className="bg-neutral-700 w-auto h-[37px] flex items-center justify-between text-sm gap-1 pl-[11px] pr-[19px] rounded-[8px] text-white"
       onClick={() => onClick(filterTitle)}
     >
       <MdClose />{' '}

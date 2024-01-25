@@ -4,38 +4,46 @@ import HidableFilterMenu from './HidableFilterMenu.component';
 
 const meta: Meta<typeof HidableFilterMenu> = {
   component: HidableFilterMenu,
-  title: 'HidableFilterMenu'
-}
+  title: 'HidableFilterMenu',
+};
 
-export default meta
+export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const selectedOptions = [] as string[]
-
-const onSelectOption = (selectedValue: string) => {
-  selectedOptions.push(selectedValue)
+interface Filters {
+  filterTitle: string;
+  filterValue: string;
 }
+
+const selectedOptions = [] as Filters[];
+
+const onSelectOption = (title: string, selectedValue: string) => {
+  selectedOptions.push({
+    filterTitle: title,
+    filterValue: selectedValue,
+  });
+};
 
 export const Base: Story = {
   args: {
-    title: "Severity",
+    title: 'Severity',
     filterOptions: [
-        {
-          "value": "Low",
-          "label": "Low"
-        },
-        {
-          "value": "Medium",
-          "label": "Medium"
-        },
-        {
-          "value": "High",
-          "label": "High"
-        }
-      ],
+      {
+        value: 'Low',
+        label: 'Low',
+      },
+      {
+        value: 'Medium',
+        label: 'Medium',
+      },
+      {
+        value: 'High',
+        label: 'High',
+      },
+    ],
     selectedOptions: selectedOptions,
-    inputType: "checkbox",
-    onSelect: onSelectOption
-  }
-}
+    inputType: 'checkbox',
+    onSelect: onSelectOption,
+  },
+};
