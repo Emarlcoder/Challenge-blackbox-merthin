@@ -1,0 +1,44 @@
+{
+  "filters": [
+    {
+      "title": "Severity",
+      "filterOptions": [
+        {
+          "value": "Low",
+          "label": "Low"
+        },
+        {
+          "value": "Medium",
+          "label": "Medium"
+        },
+        {
+          "value": "High",
+          "label": "High"
+        }
+      ],
+      "inputType": "checkbox"
+    },
+    {
+      "title": "Time",
+      "filterOptions": [
+        {
+          "value": "Last 24 hours",
+          "label": "Last 24 hours"
+        },
+        {
+          "value": "Last 72 hours",
+          "label": "Last 72 hours"
+        },
+        {
+          "value": "Last week",
+          "label": "Last week"
+        },
+        {
+          "value": "Last 6 months",
+          "label": "Last 6 months"
+        }
+      ],
+      "inputType": "radio"
+    }
+  ]
+}
